@@ -1,8 +1,8 @@
-let elements = document.getElementsByTagName("a");
+let anchors = document.getElementsByTagName("a");
 
-for (el of elements) {
-  if (el.innerText === "Sair") {
-    el.addEventListener("click", function (event) {
+for (tag of anchors) {
+  if (tag.innerText === "Sair") {
+    tag.addEventListener("click", function (event) {
       if (!confirm("Tem certeza que deseja sair?")) {
         event.preventDefault();
       }
@@ -14,10 +14,10 @@ setTimeout(() => {
   const rows = Array.from(document.querySelectorAll("tbody tr"));
   rows.splice(0, 1);
 
-  for (r of rows) {
-    const id = r.children.item(0).innerText;
-    const person = r.children.item(2).innerText;
-    const status = r.children.item(5).innerText;
+  for (tag of rows) {
+    const id = tag.children.item(0).innerText;
+    const person = tag.children.item(2).innerText;
+    const status = tag.children.item(5).innerText;
 
     if (status !== "Aberto") {
       continue;
