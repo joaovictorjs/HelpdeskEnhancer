@@ -18,5 +18,5 @@
     "default_popup": "popup/popup.html",
     "default_title": "Helpdesk Enhancer"
   },
-  "permissions": ["storage", "tabs", "scripting", "activeTab"]
+  "permissions": []
 }
