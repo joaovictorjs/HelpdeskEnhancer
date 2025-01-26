@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Helpdesk Enhancer",
+  "description": "Extensão para aprimorar o Helpdesk",
+  "version": "1.0.1",
+  "author": "skai7ami@gmail.com",
+  "homepage_url": "https://github.com/joaovictorjs/HelpdeskEnhancer",
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://helpdesk.zeusautomacao.com.br/"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Helpdesk Enhancer"
+  },
+  "permissions": ["storage", "tabs", "scripting", "activeTab"]
+}
